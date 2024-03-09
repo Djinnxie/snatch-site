@@ -1,6 +1,17 @@
 body{
     background-color: black;
 }
+#container{
+    margin:auto;
+    /* max-width:900px; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    white-space: nowrap;
+}
+#supermatrix{
+}
 .matrix td{
     background-color: #2d2d2d;
 }

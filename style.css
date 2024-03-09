@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+.matrix td{
+    background-color: #2d2d2d;
+}
+.matrixContainer{
+    display:inline-block;
+}
+.supermatrixBuffer{
+    /* border:2px solid red; */
+    display: none;
+}
+#buffer{
+    display: none;
+}

@@ -1,0 +1,29 @@
+.matrix {
+    background-color: black;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.matrix td
+/* , #onion td  */
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+}
+
+.matrix td {
+    background-color: grey;
+}
+
+        
+/* #onion td[data-checked="true"] {
+    background-color: #f7ff00;
+} */
+
+.matrix td[data-checked="true"] {
+    background-color: red;
+}

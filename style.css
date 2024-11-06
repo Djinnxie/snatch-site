@@ -1,16 +1,49 @@
 body{
     background-color: black;
+    overflow:hidden;
+      background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+    background-image:url("./bg.png");
 }
+
+.orbit-regular {
+  font-family: "Orbit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 #container{
     margin:auto;
     /* max-width:900px; */
     display:flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
     height:100vh;
     white-space: nowrap;
 }
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+}
+#static{
+  background-image:url(https://64.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gifv);
+  opacity: 0.5;
+  mix-blend-mode: saturation;
+}
+#noise{
+    background-image: url("https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png");
+  opacity: 0.5;
+  mix-blend-mode: color;
+}
+
 #supermatrix{
+  height:80vh;
 }
 .matrix td{
     background-color: #2d2d2d;
@@ -24,4 +57,32 @@ body{
 }
 #buffer{
     display: none;
+}
+
+#options{
+  color:#ff0000;
+  font-weight:bold;
+  font-size:2em;
+  text-transform:uppercase;
+/*  border-top:2px solid #ff0000; */
+}
+#options a,a:visited,a:hover{
+  text-decoration:none;
+  color:#aa0505;
+}
+#options a:hover{
+  color:#ff0505;
+}
+#options li{
+  font-family: "Orbit", sans-serif;
+  margin:0 7px 0 10px;
+  display:inline;
+}
+#options li:not(:first-child):before {
+  content: '\ffed';
+  margin-right: 0.5em;
+}
+.disabled{
+  color:grey!important;
+  opacity:0.2!important;
 }

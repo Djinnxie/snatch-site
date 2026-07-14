@@ -29,7 +29,8 @@
       position:absolute;
       left:0;
       top:0;
-      overflow:scroll;
+      overflow-y:scroll;
+      overflow-x:hidden;
     }
     #outer2::-webkit-scrollbar {
       display: none;
@@ -7914,21 +7915,39 @@
             // document.getElementById("titleBTN").addEventListener("click", () => {
             //   alert("A")
             // });
-            $("#btn_music").on("click", function () { scrollIntoFrame(0) });
-            $("#btn_design").on("click", function () { scrollIntoFrame(2) });
-            $("#btn_title").on("click", function () { scrollIntoFrame(1) });
+            // if (!window.mobileCheck()) {
+              // $("body").css({
+              //   overflow: "hidden"
+              // })
+            // }else{
+
+            // $("#btn_music").on("click", function () { scrollIntoFrame(0) });
+            // $("#btn_design").on("click", function () { scrollIntoFrame(2) });
+            // $("#btn_title").on("click", function () { scrollIntoFrame(1) });
+            // }
           };
           // window.scrollTo(0,60);
 
-          // $("body").css({
-          //   overflow:"hidden"
-          // })
+          // $("#outer2").on( "scroll",function(){
+          //   // scrollp = $("#outer2").scrollTop();
+          //   // bHeight = $('#outer2').height();
+            
+          //   // dif = ((scrollp+bHeight)/bHeight)
+          //   // console.log(dif,scrollp)
+          //   mOff=$("#btn_music").offset().top;
+          //   if(mOff<0){
+          //   // $("#outer2").scrollLeft(mOff*-1);
+          //   $("#outer2").animate({scrollLeft:(mOff*-1)},10);
+          //   }else{
+          //   $("#outer2").animate({scrollLeft:0},10);
+
+          //   }
+          //   // console.log("A")
+          // });
+
           scrollIntoFrame(1);
         });
-        window.onload = function () {
-          // Automatically scroll the page to hide the address bar
-          window.scrollTo(0, 1);
-        };
+        
 
 
         function goFullScreen() {

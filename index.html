@@ -19,11 +19,8 @@
           pointer-events:all;
     }
     .link:hover{
-      fill:blue!important;
       stroke: #f4f0c2;
-      /* stroke: black!important; */
       stroke-width: 5px;
-      /* stroke-opacity: 50%; */
       paint-order:fill;
     }
     
@@ -73,6 +70,8 @@
 <body>
   <div id='outer2'>
   <div id='outer'>
+    <div id="inner">
+
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1546.66 1381.69">
   <defs>
@@ -7795,9 +7794,16 @@
   </g>
 </svg>
   </div>
+    </div>
   </div>
   <script>
           let scrollH = document.getElementById("outer2");
+          let svg = document.getElementById("inner");
+            // center in mobile
+            if (window.innerHeight > svg.offsetHeight) {
+              console.log('true')
+              document.getElementById("inner").style.paddingTop = (window.innerHeight - svg.offsetHeight) / 2+"px";
+            }
           let endPoint=0.30;
           let steps = (scrollH.offsetWidth * endPoint - scrollH.scrollTop)/50;
           let dir=(scrollH.scrollTop < scrollH.offsetWidth * endPoint);

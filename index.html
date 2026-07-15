@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html>
+  <!-- 
+ :O
+ its rude to peek under a girl's hood without asking!
+ -->
 
 <head>
-  <!-- <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0,fullscreen=true"> -->
-  <!-- <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" /> -->
+  
   <style>
     @font-face {
       font-family: 'OCR-B';
@@ -7801,7 +7803,6 @@
           let svg = document.getElementById("inner");
             // center in mobile
             if (window.innerHeight > svg.offsetHeight) {
-              console.log('true')
               document.getElementById("inner").style.paddingTop = (window.innerHeight - svg.offsetHeight) / 2+"px";
             }
           let endPoint=0.30;
@@ -7816,6 +7817,8 @@
               clearInterval(sc);
             }
           },10);
+          console.log("%c:O", "color: red;font-weight:bold;font-size:25px;"); 
+          console.log("%cits rude to peek under a girl's hood without asking!  ", "color: red;font-weight:bold;font-size:25px;"); 
         document.getElementById("btn_bookings").addEventListener("click", () => {
           window.open( "https://www.instagram.com/snatchstrap/" , '_blank');
         });
